@@ -1,0 +1,475 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+$color-primary: #000D6B;
+$color-accent: #9C19E0;
+$color-pale: #FF5DA2;;
+$color-white:  #FFFFFF;
+$body-font:  sans-serif;
+
+
+
+
+
+
+
+body{
+  font-family: $body-font;
+  font-size: 1rem;
+}
+
+
+
+
+a {
+  text-decoration: none;
+  color: $color-accent;
+}
+
+li {
+  list-style: none;
+}
+
+.text-color-primary{
+  
+  color: $color-primary ;
+}
+
+.text-color-accent{
+  color: $color-accent;
+}
+
+
+
+.zoom {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+ 
+.zoom:hover {
+  transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+  
+.navbar{
+  background-color: $color-primary;
+}  
+
+
+.btn:focus{
+  box-shadow: none;
+}
+
+.btn-borderless{
+  color: $color-primary;
+
+  &:hover{
+    color: $color-pale;
+
+  }
+}
+
+.btn-primary{
+  background-color: $color-accent;
+  border-color: $color-accent;
+
+  &:hover{
+    background-color: $color-pale;
+    border-color: $color-pale;
+  }
+}
+
+.form-control:focus{
+  border-color: $color-pale;
+  box-shadow:  0 0 0.25rem rgba(152, 214, 220, 25%)
+}
+
+.form-check-input{
+
+  &:checked{
+    background-color: $color-accent;
+    border-color: $color-accent;
+  }
+
+  &:focus{
+    border-color: $color-pale;
+  box-shadow:  0 0 0.25rem rgba(152, 214, 220, 25%)
+  }
+}
+
+
+.modal-title{
+  color: $color-primary;
+  font-weight: bold;
+}
+
+
+
+.nav-link{
+  
+  color: $color-white !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+  
+
+
+  &:hover{
+    color: $color-accent !important;
+    border-bottom: solid 1px $color-white;
+    
+  }
+
+  &:focus{
+    color: $color-accent;
+    border-bottom: solid 1px $color-white;
+  }
+}
+
+
+.carousel-caption{
+  z-index: 3;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  text-align: left;
+}
+
+
+
+.carousel-images{
+  max-width: 100%;
+  height: calc(100% - 200px);
+  object-fit: cover;
+ 
+}
+
+
+
+
+
+
+.hero-headline{
+
+  h2{
+    font-size: 4rem ;
+  }
+  
+
+}
+
+.text-highlight{
+  color: $color-accent;
+}
+
+.main-carousel-controls{
+  
+  span{
+    color: $color-white;
+    background-size: 30px ;
+    background-color: grey;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+  
+  }
+}
+   
+  
+  
+
+
+  .carousel-text {
+    height: 50px;
+    
+  }
+  
+  
+  
+  #myCarouselIndicators {
+     button {
+       width: 5px  ;
+       height: 5px;
+      border-radius: 50% ;
+     }
+  }
+
+  .carousel-indicators .active {
+    background-color: $color-accent;
+  }
+
+
+  .section-title{
+    font-weight:  bold ;
+    color: $color-primary;
+  }
+
+  .card-img-overlay{
+    position: absolute;
+    top: 40%;
+
+      a{
+        color: $color-white;
+      }
+
+  }
+   
+ 
+   
+  
+  .section-products .single-product {
+    margin-bottom: 26px;
+}
+
+
+#product-1 .part-1{
+  background: url(/images/featured/Jordan-11.png) no-repeat center;
+  background-size: cover;
+}
+
+#product-2 .part-1{
+  background: url(/images/featured/2015-Nike-Mag-02_hd_1600.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+#product-3 .part-1{
+  background: url(/images/featured/adidas-nmd.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+#product-4 .part-1{
+  background: url(/images/featured/nike-air-max-1.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+#product-5 .part-1{
+  background: url(/images/featured/jordan-6.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#product-6 .part-1{
+  background: url(/images/featured/jordan-4.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+
+ .single-product .part-1 {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+ .single-product .part-1::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: all 0.3s;
+}
+
+ .single-product:hover .part-1::before {
+		transform: scale(1.2,1.2) rotate(5deg);
+}
+
+
+ .single-product .part-1 ul {
+  position: absolute;
+  bottom: -41px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+
+.single-product:hover .part-1 ul {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.single-product .part-1 ul li {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.single-product .part-1 ul li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: $color-pale;
+  color: #444444;
+  text-align: center;
+  // box-shadow: 0 2px 20px rgba(50, 50,50,10%);
+  transition: color 0.2s;
+}
+
+.single-product .part-1 ul li a:hover {
+  color: $color-accent;
+}
+
+.single-product .part-2 .product-title {
+  font-size: 1rem;
+}
+
+.single-product .part-2 h4 {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.single-product .part-1 .discount,
+.single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #fe302f;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.single-product .part-1 .new {
+    left: 0;
+    background-color: #444444;
+}
+
+.single-product .part-2 .product-old-price {
+  position: relative;
+  padding: 0 7px;
+  margin-right: 2px;
+  opacity: 0.6;
+}
+
+.single-product .part-2 .product-old-price::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #444444;
+  transform: translateY(-50%);
+}
+
+
+.site-footer{
+  li a{
+    color: $color-primary;
+
+    &:hover{
+      color: $color-pale;
+    }
+  }
+
+  .dropdown-menu{
+    background-color: transparent;
+  }
+}
+  /* Nav menu hover */
+  @media all and (min-width: 992px) {
+    .navbar .dropdown-menu-end {
+      right: 0;
+      left: auto;
+    }
+    .navbar .nav-item .dropdown-menu {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+      margin-top: 0;
+    }
+    .navbar .nav-item:hover .nav-link {
+      color: #fff;
+    }
+    .navbar .dropdown-menu.fade-down {
+      top: 80%;
+      transform: rotateX(-75deg);
+      transform-origin: 0% 0%;
+    }
+    .navbar .dropdown-menu.fade-up {
+      top: 180%;
+    }
+    .navbar .nav-item:hover .dropdown-menu {
+      transition: 0.3s;
+      opacity: 1;
+      visibility: visible;
+      top: 100%;
+      transform: rotateX(0deg);
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+
+    .carousel-caption{
+      top: 20px;
+    }
+    .hero-headline {
+      h2{
+      font-size: 1.5rem
+      }
+    }
+
+    .hero-text{
+      font-size: .8rem;
+    }
+
+    .btn{
+      @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+    }
+
+  }
+    
+ 
+  // Sale page items
+
+ #saleProduct1 .part-1{
+   background: url(/images/sales/addidas-climbaboost.png) no-repeat center;
+   background-size: cover;
+ }
+
+ #saleProduct2 .part-1{
+  background: url(/images/sales/air-force-1.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+#saleProduct3 .part-1{
+  background: url(/images/sales/air-griffey-max-1.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+#saleProduct4 .part-1{
+  background: url(/images/sales/air-lebron.webp) no-repeat center;
+  background-size: cover;
+}
+
+#saleProduct5 .part-1{
+  background: url(/images/sales/air-max.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+#saleProduct6 .part-1{
+  background: url(/images/sales/jordan-zoom-92.png) no-repeat center;
+  background-size: cover;
+}
+
+#saleProduct7 .part-1{
+  background: url(/images/sales/off-white-nike-air-zoom-tempo-next-release-date-price-06.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+#saleProduct8 .part-1{
+  background: url(/images/sales/orignals-nmd-1.png) no-repeat center;
+  background-size: cover;
+}
+
+#saleProduct9 .part-1{
+  background: url(/images/sales/ultraboost.jpg) no-repeat center;
+  background-size: cover;
+}
+  
