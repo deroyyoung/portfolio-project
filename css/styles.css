@@ -7889,7 +7889,7 @@ li {
 
 .carousel-images {
   max-width: 100%;
-  height: calc(100% - 200px);
+  height: 100%;
   object-fit: cover; }
 
 .hero-headline h2, .hero-headline .h2 {
@@ -8080,15 +8080,24 @@ li {
 
 @media only screen and (max-width: 400px) {
   .carousel-caption {
-    top: 20px; }
+    top: 30%; }
   .hero-headline h2, .hero-headline .h2 {
-    font-size: 1.5rem; }
+    font-size: 2rem; }
+  .main-carousel-controls span {
+    background-size: 15px;
+    background-color: grey;
+    height: 30px;
+    width: 30px; }
   .hero-text {
-    font-size: .8rem; }
+    display: none; }
   .btn {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
     border-radius: 0.2rem; } }
+
+@media (max-width: 400px) {
+  .carousel .carousel-inner .carousel-item .carousel-images {
+    height: 400px; } }
 
 #saleProduct1 .part-1 {
   background: url(/images/sales/addidas-climbaboost.png) no-repeat center;
